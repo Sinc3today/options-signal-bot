@@ -7,7 +7,7 @@ def evaluate_entry_conditions(symbol, df, signals, trend):
     if not rules:
         return None  # No rules defined for this trend
 
-    # Count how many signals match the required rule set
+# Count how many signals match the required rule set
     matches = sum(1 for rule in rules if signals.get(rule))
 
     # Optionally return score (even if entry is not triggered)

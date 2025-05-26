@@ -3,10 +3,12 @@
 import discord
 from discord.ext import commands
 import pandas as pd
+from dotenv import load_dotenv
 import os
 from entry_exit_tracker import log_entry
 
-TOKEN = "MTM3NjQxNzU4NzE5NzM4Mjc0Nw.G6nfUv.ZjySBPH9JuTedhotDWcWPUZojA_FOao-UEmzLg"  # Replace this with your actual token
+load_dotenv()
+TOKEN = os.getenv("Discord_Cleanup_Bot_Token")
 
 intents = discord.Intents.default()
 intents.message_content = True

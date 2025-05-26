@@ -1,106 +1,117 @@
-# evaluate_pending_entries.py
-
-from pending_entry_queue import update_pending_status
-from entry_exit_tracker import log_entry
-from price_data import get_recent_price_data
-import pandas as pd
+import os
+import csv
 from datetime import datetime
-import re
+from price_data import get_recent_price_data
 
-LOG_PATH = "output/logs/tasklog.txt"
-
-def strip_emoji(text):
-    emoji_pattern = re.compile(
-        "[" "\U0001F600-\U0001F64F"
-        "\U0001F300-\U0001F5FF"
-        "\U0001F680-\U0001F6FF"
-        "\U0001F700-\U0001F77F"
-        "\U0001F780-\U0001F7FF"
-        "\U0001F800-\U0001F8FF"
-        "\U0001F900-\U0001F9FF"
-        "\U0001FA00-\U0001FA6F"
-        "\U0001FA70-\U0001FAFF"
-        "\u2600-\u26FF"
-        "\u2700-\u27BF" "]+",
-        flags=re.UNICODE
-    )
-    return emoji_pattern.sub(r'', text)
+# File paths (match project layout)
+PENDING_FILE = "output/logs/pending_entries.csv"
+LOG_FILE = "output/logs/entry_log.txt"
 
 def log(message):
-    timestamped = f"[{datetime.now()}] {message}"
-    print(timestamped)  # keep emojis in terminal
-    safe = strip_emoji(timestamped)
-
-    with open(LOG_PATH, "a", encoding="utf-8") as f:
-        f.write(safe + "\n")
-
-PENDING_CSV = "output/logs/pending_entries.csv"
-
-def log(message):
-    with open("output/logs/tasklog.txt", "a") as f:
-        f.write(f"[{datetime.now()}] {message}\n")
-
-def parse_price_condition(entry_condition):
+    """
+    Logs a message to output/logs/entry_log.txt with UTF-8 encoding.
+    Automatically creates the output/logs directory if it doesn't exist.
+    """
+    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
     try:
-        return float(entry_condition.split()[2])
+        with open(LOG_FILE, "a", encoding="utf-8") as f:
+            f.write(f"[{datetime.now()}] {message}\n")
     except Exception as e:
-        log(f"[ERROR] Failed to parse trigger price from: {entry_condition} | {e}")
-        return None
+        print(f"[Log Error] Could not write log entry: {e}")
+
+
+def get_current_price(symbol):
+    """
+    Uses get_recent_price_data() from price_data module to return the latest price for a symbol.
+    Assumes result has a 'Close' column.
+    """
+    try:
+        df = get_recent_price_data(symbol)
+        if df is not None and not df.empty:
+            return df["Close"].iloc[-1].item()  # Future-proof pandas float
+    except Exception as e:
+        log(f"[ERROR] Failed to fetch price for {symbol}: {e}")
+    return None
+
+
+def load_pending_entries():
+    """
+    Loads pending entries from CSV. Each row is a dict.
+    """
+    entries = []
+    if os.path.exists(PENDING_FILE):
+        with open(PENDING_FILE, mode="r", newline="") as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                entries.append(row)
+    else:
+        log(f"[WARNING] No pending entries file found: {PENDING_FILE}")
+    return entries
+
+
+def save_pending_entries(entries):
+    """
+    Overwrites the pending entries file with the updated list.
+    """
+    if not entries:
+        return
+    with open(PENDING_FILE, mode="w", newline="") as csvfile:
+        fieldnames = entries[0].keys()
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(entries)
+
 
 def check_pending_entries():
-    try:
-        df = pd.read_csv(PENDING_CSV)
-    except FileNotFoundError:
-        log("[PENDING] No pending entries file found.")
-        return
+    """
+    Evaluates each pending entry. Updates 'Status' field to prevent duplicates.
+    If conditions are met, marks as 'entered'. If not, leaves as 'waiting'.
+    """
+    all_entries = load_pending_entries()
+    updated_entries = []
 
-    waiting_entries = df[df["Status"] == "waiting"]
+    for entry in all_entries:
+        symbol = entry.get("Symbol")
+        status = entry.get("Status", "waiting").lower()
+        direction = entry.get("Direction", "bullish").lower()
 
-    if waiting_entries.empty:
-        log("[PENDING] No pending trades to evaluate.")
-        return
-
-    for _, row in waiting_entries.iterrows():
-        symbol = row["Symbol"]
-        trend = row["Signal Trend"]
-        trigger_price = parse_price_condition(row["Entry Condition"])
-        signal_time = row["Signal Source Time"]
-
-        if not trigger_price:
-            log(f"[SKIP] {symbol}: Could not parse entry condition.")
+        if status == "entered":
+            updated_entries.append(entry)  # already processed
             continue
 
         try:
-            df_price = get_recent_price_data(symbol, interval="5m", period="1d")
-
-            if df_price.empty or "Close" not in df_price.columns:
-                log(f"[SKIP] {symbol}: No recent price data.")
-                continue
-
-            current_price = float(df_price["Close"].iloc[-1].item())
-        except Exception as e:
-            log(f"[ERROR] Failed to retrieve price for {symbol}: {e}")
+            trigger_price = float(entry.get("Trigger Price", 0))
+        except ValueError:
+            log(f"[ERROR] Invalid trigger price for {symbol}. Skipping.")
+            entry["Status"] = "waiting"
+            updated_entries.append(entry)
             continue
 
-        if current_price >= trigger_price:
-            log_entry(
-                symbol=symbol,
-                entry_price=current_price,
-                buffer="0.5%",
-                rationale=row["Entry Condition"],
-                expectation=f"{trend} trend continuation",
-                signal_time=signal_time,
-                trend=trend
-            )
-            update_pending_status(
-                symbol=symbol,
-                new_status="entered",
-                entry_price=current_price,
-                notes="Auto-triggered by price breakout"
-            )
-            log(f"[ENTRY ✅] {symbol} entered @ {current_price}")
+        current_price = get_current_price(symbol)
+
+        if current_price is None:
+            log(f"[SKIP] {symbol} — could not fetch current price")
+            entry["Status"] = "waiting"
+            updated_entries.append(entry)
+            continue
+
+        # Evaluate trigger condition
+        triggered = (
+            direction == "bullish" and current_price >= trigger_price or
+            direction == "bearish" and current_price <= trigger_price
+        )
+
+        if triggered:
+            log(f"[ENTRY ✅] {symbol} triggered @ {current_price} (Target: {trigger_price})")
+            entry["Status"] = "entered"
+            # Optional: mark_trade_entry(...)
         else:
-            log(f"[WAIT] {symbol}: {current_price} < {trigger_price}")
+            entry["Status"] = "waiting"
+
+        updated_entries.append(entry)  # Always add entry back with updated status
+
+    save_pending_entries(updated_entries)
+
 
 if __name__ == "__main__":
     check_pending_entries()

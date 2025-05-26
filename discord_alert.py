@@ -1,10 +1,13 @@
 # output/discord_alert.py
 
 import discord
+from dotenv import load_dotenv
+import os
 import asyncio
 
 # === REQUIRED: Replace with your actual Discord bot token and channel ID ===
-TOKEN = "MTM3NDEyMzAzMjQxMDU4NzI0OA.GepmHS.32j1zXzlGMS_2bskSP8R1k8Bu-ShEUGF8x1FXQ"
+load_dotenv()
+TOKEN = os.getenv("Discord_Alert_Bot_Token")
 CHANNEL_ID = 1373889877002944593  # Your channel ID where alerts should go
 
 # === Initialize client ===

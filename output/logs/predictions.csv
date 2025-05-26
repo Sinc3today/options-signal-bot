@@ -1479,3 +1479,367 @@ AMD    110.29
 Name: 2025-05-23 19:55:00, dtype: float64","Ticker
 AMD    109.6
 Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:40:06.556049,SPY,Bearish,False,False,False,38.45,True,"Ticker
+SPY    579.85
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.49
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.74
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:40:07.013991,AAPL,Bearish,False,False,False,41.44,True,"Ticker
+AAPL    195.63
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    195.03
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    196.14
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:40:07.511058,MSFT,Bearish,False,False,False,32.15,True,"Ticker
+MSFT    451.19
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    450.0
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    451.11
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:40:07.954052,TSLA,Bearish,False,False,False,38.69,True,"Ticker
+TSLA    340.04
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    339.02
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    338.32
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:40:08.538177,NVDA,Bearish,False,False,False,38.76,True,"Ticker
+NVDA    131.5
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.14
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.17
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:40:09.021655,QQQ,Bearish,False,False,False,37.04,True,"Ticker
+QQQ    509.88
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    508.82
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    509.09
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:40:09.459272,GOOGL,Bearish,False,False,False,32.28,True,"Ticker
+GOOGL    168.55
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    168.23
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    169.07
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:04.977433,SPY,Bearish,False,False,False,38.45,True,"Ticker
+SPY    579.85
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.49
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.74
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:05.484420,AAPL,Bearish,False,False,False,41.44,True,"Ticker
+AAPL    195.63
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    195.03
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    196.14
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:05.959556,MSFT,Bearish,False,False,False,32.15,True,"Ticker
+MSFT    451.19
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    450.0
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    451.11
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:06.618973,TSLA,Bearish,False,False,False,38.69,True,"Ticker
+TSLA    340.04
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    339.02
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    338.32
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:07.156348,NVDA,Bearish,False,False,False,38.76,True,"Ticker
+NVDA    131.5
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.14
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.17
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:07.607903,QQQ,Bearish,False,False,False,37.04,True,"Ticker
+QQQ    509.88
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    508.82
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    509.09
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:08.107439,GOOGL,Bearish,False,False,False,32.28,True,"Ticker
+GOOGL    168.55
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    168.23
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    169.07
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:08.640556,META,Bearish,False,False,False,32.36,True,"Ticker
+META    627.96
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    626.33
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    628.63
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:45:09.129152,AMD,Bearish,False,False,False,42.56,True,"Ticker
+AMD    110.44
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    110.29
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    109.6
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:04.928434,SPY,Bearish,False,False,False,38.45,True,"Ticker
+SPY    579.85
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.49
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.74
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:05.448762,AAPL,Bearish,False,False,False,41.44,True,"Ticker
+AAPL    195.63
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    195.03
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    196.14
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:06.009493,MSFT,Bearish,False,False,False,32.15,True,"Ticker
+MSFT    451.19
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    450.0
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    451.11
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:06.855516,TSLA,Bearish,False,False,False,38.69,True,"Ticker
+TSLA    340.04
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    339.02
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    338.32
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:07.314233,NVDA,Bearish,False,False,False,38.76,True,"Ticker
+NVDA    131.5
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.14
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.17
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:07.804437,QQQ,Bearish,False,False,False,37.01,True,"Ticker
+QQQ    509.88
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    508.82
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    509.09
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:08.287452,GOOGL,Bearish,False,False,False,32.28,True,"Ticker
+GOOGL    168.55
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    168.23
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    169.07
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:08.964772,META,Bearish,False,False,False,32.36,True,"Ticker
+META    627.96
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    626.33
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    628.63
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T08:50:09.400650,AMD,Bearish,False,False,False,42.56,True,"Ticker
+AMD    110.44
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    110.29
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    109.6
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:05.042712,SPY,Bearish,False,False,False,38.45,True,"Ticker
+SPY    579.85
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.49
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.74
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:05.582205,AAPL,Bearish,False,False,False,41.44,True,"Ticker
+AAPL    195.63
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    195.03
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    196.14
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:06.061316,MSFT,Bearish,False,False,False,32.15,True,"Ticker
+MSFT    451.19
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    450.0
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    451.11
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:06.649107,TSLA,Bearish,False,False,False,38.69,True,"Ticker
+TSLA    340.04
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    339.02
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    338.32
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:07.182500,NVDA,Bearish,False,False,False,38.76,True,"Ticker
+NVDA    131.5
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.14
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.17
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:07.987808,QQQ,Bearish,False,False,False,37.04,True,"Ticker
+QQQ    509.88
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    508.82
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    509.09
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:08.582802,GOOGL,Bearish,False,False,False,32.28,True,"Ticker
+GOOGL    168.55
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    168.23
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    169.07
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:09.179150,META,Bearish,False,False,False,32.36,True,"Ticker
+META    627.96
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    626.33
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    628.63
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:00:09.703543,AMD,Bearish,False,False,False,42.56,True,"Ticker
+AMD    110.44
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    110.29
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    109.6
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:43.405182,SPY,Bearish,False,False,False,38.45,True,"Ticker
+SPY    579.85
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.49
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.74
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:43.841928,AAPL,Bearish,False,False,False,41.44,True,"Ticker
+AAPL    195.63
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    195.03
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    196.14
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:44.255744,MSFT,Bearish,False,False,False,32.15,True,"Ticker
+MSFT    451.19
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    450.0
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    451.11
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:44.832188,TSLA,Bearish,False,False,False,38.69,True,"Ticker
+TSLA    340.04
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    339.02
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    338.32
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:45.311439,NVDA,Bearish,False,False,False,38.76,True,"Ticker
+NVDA    131.5
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.14
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.17
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:45.716425,QQQ,Bearish,False,False,False,37.04,True,"Ticker
+QQQ    509.88
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    508.82
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    509.09
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:46.157351,GOOGL,Bearish,False,False,False,32.28,True,"Ticker
+GOOGL    168.55
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    168.23
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    169.07
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:46.636472,META,Bearish,False,False,False,32.36,True,"Ticker
+META    627.96
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    626.33
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    628.63
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:31:47.131346,AMD,Bearish,False,False,False,42.56,True,"Ticker
+AMD    110.44
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    110.29
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    109.6
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:28.619199,SPY,Bearish,False,False,False,38.45,True,"Ticker
+SPY    579.85
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.49
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+SPY    578.74
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:29.124690,AAPL,Bearish,False,False,False,41.44,True,"Ticker
+AAPL    195.63
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    195.03
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AAPL    196.14
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:29.713983,MSFT,Bearish,False,False,False,32.15,True,"Ticker
+MSFT    451.19
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    450.0
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+MSFT    451.11
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:30.352489,TSLA,Bearish,False,False,False,38.67,True,"Ticker
+TSLA    340.04
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    339.02
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+TSLA    338.32
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:30.837506,NVDA,Bearish,False,False,False,38.76,True,"Ticker
+NVDA    131.5
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.14
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+NVDA    131.17
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:32.450207,QQQ,Bearish,False,False,False,37.04,True,"Ticker
+QQQ    509.88
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    508.82
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+QQQ    509.09
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:33.166501,GOOGL,Bearish,False,False,False,32.28,True,"Ticker
+GOOGL    168.55
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    168.23
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+GOOGL    169.07
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:34.092708,META,Bearish,False,False,False,32.34,True,"Ticker
+META    627.96
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    626.33
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+META    628.64
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,
+2025-05-26T09:32:34.594647,AMD,Bearish,False,False,False,42.56,True,"Ticker
+AMD    110.44
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    110.29
+Name: 2025-05-23 19:55:00, dtype: float64","Ticker
+AMD    109.6
+Name: 2025-05-23 19:55:00, dtype: float64",,,,,,

@@ -1,8 +1,5 @@
 # config.py
 
-# Bot Tokens
-# Cleanup Bot = MTM3NjQxNzU4NzE5NzM4Mjc0Nw.G6nfUv.ZjySBPH9JuTedhotDWcWPUZojA_FOao-UEmzLg
-# Alert Bot = MTM3NDEyMzAzMjQxMDU4NzI0OA.GepmHS.32j1zXzlGMS_2bskSP8R1k8Bu-ShEUGF8x1FXQ
 # Market timing
 MARKET_OPEN_TIME = "09:30"
 START_ANALYSIS_TIME = "09:35"

@@ -1,8 +1,11 @@
 import discord
 import csv
+import os
 from discord.ext import commands
+from dotenv import load_dotenv
 
-TOKEN = "MTM3NDEyMzAzMjQxMDU4NzI0OA.GepmHS.32j1zXzlGMS_2bskSP8R1k8Bu-ShEUGF8x1FXQ"
+load_dotenv()
+TOKEN = os.getenv("Discord_Alert_Bot_Token")
 EMOJI_TRIGGER = "👀"
 PREDICTIONS_PATH = "output/logs/predictions.csv"
 

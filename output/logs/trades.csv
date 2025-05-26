@@ -1,2 +1,3 @@
 Symbol,Entry Time,Entry Price,Buffer,Rationale,Expectation,Signal Source Time,Trend at Entry,Exit Time,Exit Price,Change %,Outcome,Notes
 AAPL,2025-05-26T00:32:23.624717,195.33999633789062,0.5%,Break below 194.05 (0.5% buffer),Bearish trend continuation,2025-05-26 00:31:41.049314,Bearish,,,,,
+MSFT,2025-05-26T09:32:44.026949,450.19000244140625,0.5%,Break below 447.75 (0.5% buffer),Bearish trend continuation,2025-05-26 00:31:41.627009,Bearish,,,,,

@@ -286,3 +286,150 @@
 [2025-05-26 00:32:12.646355] [SKIP] META already queued for 623.2
 [2025-05-26 00:32:12.647089] Fetching data for AMD
 [2025-05-26 00:32:13.328665] [SKIP] AMD already queued for 109.73
+[2025-05-26 08:40:05.440443] main.py started successfully.
+[2025-05-26 08:40:05.474056] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 08:40:05.474576] Signal bot started
+[2025-05-26 08:40:05.474988] Loading stock list from: data/stocks.csv
+[2025-05-26 08:40:05.476715] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 08:40:05.477167] Fetching data for SPY
+[2025-05-26 08:40:06.561679] [SKIP] SPY already queued for 575.6
+[2025-05-26 08:40:06.562183] Fetching data for AAPL
+[2025-05-26 08:40:07.030777] [ERROR] Failed to process AAPL: 'charmap' codec can't encode character '\u23f3' in position 9: character maps to <undefined>
+[2025-05-26 08:40:07.031711] Fetching data for MSFT
+[2025-05-26 08:40:07.516616] [SKIP] MSFT already queued for 447.75
+[2025-05-26 08:40:07.517211] Fetching data for TSLA
+[2025-05-26 08:40:07.960010] [SKIP] TSLA already queued for 337.32
+[2025-05-26 08:40:07.960574] Fetching data for NVDA
+[2025-05-26 08:40:08.543514] [SKIP] NVDA already queued for 130.48
+[2025-05-26 08:40:08.544042] Fetching data for QQQ
+[2025-05-26 08:40:09.027751] [SKIP] QQQ already queued for 506.28
+[2025-05-26 08:40:09.028318] Fetching data for GOOGL
+[2025-05-26 08:40:09.464369] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 08:40:09.464871] Fetching data for META
+[2025-05-26 08:45:04.118557] main.py started successfully.
+[2025-05-26 08:45:04.125907] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 08:45:04.126350] Signal bot started
+[2025-05-26 08:45:04.126768] Loading stock list from: data/stocks.csv
+[2025-05-26 08:45:04.128102] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 08:45:04.128537] Fetching data for SPY
+[2025-05-26 08:45:04.982685] [SKIP] SPY already queued for 575.6
+[2025-05-26 08:45:04.983145] Fetching data for AAPL
+[2025-05-26 08:45:05.489928] [SKIP] AAPL already queued for 194.05
+[2025-05-26 08:45:05.490405] Fetching data for MSFT
+[2025-05-26 08:45:05.964427] [SKIP] MSFT already queued for 447.75
+[2025-05-26 08:45:05.965197] Fetching data for TSLA
+[2025-05-26 08:45:06.624529] [SKIP] TSLA already queued for 337.32
+[2025-05-26 08:45:06.625053] Fetching data for NVDA
+[2025-05-26 08:45:07.161121] [SKIP] NVDA already queued for 130.48
+[2025-05-26 08:45:07.161562] Fetching data for QQQ
+[2025-05-26 08:45:07.613191] [SKIP] QQQ already queued for 506.28
+[2025-05-26 08:45:07.613677] Fetching data for GOOGL
+[2025-05-26 08:45:08.113143] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 08:45:08.113620] Fetching data for META
+[2025-05-26 08:45:08.645895] [SKIP] META already queued for 623.2
+[2025-05-26 08:45:08.646369] Fetching data for AMD
+[2025-05-26 08:45:09.133854] [SKIP] AMD already queued for 109.73
+[2025-05-26 08:50:04.021821] main.py started successfully.
+[2025-05-26 08:50:04.029326] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 08:50:04.029768] Signal bot started
+[2025-05-26 08:50:04.030171] Loading stock list from: data/stocks.csv
+[2025-05-26 08:50:04.031541] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 08:50:04.031971] Fetching data for SPY
+[2025-05-26 08:50:04.933952] [SKIP] SPY already queued for 575.6
+[2025-05-26 08:50:04.934427] Fetching data for AAPL
+[2025-05-26 08:50:05.453594] [SKIP] AAPL already queued for 194.05
+[2025-05-26 08:50:05.454049] Fetching data for MSFT
+[2025-05-26 08:50:06.015223] [SKIP] MSFT already queued for 447.75
+[2025-05-26 08:50:06.015715] Fetching data for TSLA
+[2025-05-26 08:50:06.860144] [SKIP] TSLA already queued for 337.32
+[2025-05-26 08:50:06.860582] Fetching data for NVDA
+[2025-05-26 08:50:07.318962] [SKIP] NVDA already queued for 130.48
+[2025-05-26 08:50:07.319434] Fetching data for QQQ
+[2025-05-26 08:50:07.809680] [SKIP] QQQ already queued for 506.28
+[2025-05-26 08:50:07.810338] Fetching data for GOOGL
+[2025-05-26 08:50:08.292141] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 08:50:08.292956] Fetching data for META
+[2025-05-26 08:50:08.972273] [SKIP] META already queued for 623.2
+[2025-05-26 08:50:08.972819] Fetching data for AMD
+[2025-05-26 08:50:09.406326] [SKIP] AMD already queued for 109.73
+[2025-05-26 08:55:04.074189] main.py started successfully.
+[2025-05-26 08:55:04.081643] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 08:55:04.082161] Signal bot started
+[2025-05-26 08:55:04.082648] Loading stock list from: data/stocks.csv
+[2025-05-26 08:55:04.084223] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 08:55:04.084710] Fetching data for SPY
+[2025-05-26 09:00:04.021655] main.py started successfully.
+[2025-05-26 09:00:04.029252] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 09:00:04.029679] Signal bot started
+[2025-05-26 09:00:04.030150] Loading stock list from: data/stocks.csv
+[2025-05-26 09:00:04.031575] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 09:00:04.031989] Fetching data for SPY
+[2025-05-26 09:00:05.047935] [SKIP] SPY already queued for 575.6
+[2025-05-26 09:00:05.048385] Fetching data for AAPL
+[2025-05-26 09:00:05.586994] [SKIP] AAPL already queued for 194.05
+[2025-05-26 09:00:05.587441] Fetching data for MSFT
+[2025-05-26 09:00:06.066028] [SKIP] MSFT already queued for 447.75
+[2025-05-26 09:00:06.066475] Fetching data for TSLA
+[2025-05-26 09:00:06.654238] [SKIP] TSLA already queued for 337.32
+[2025-05-26 09:00:06.654707] Fetching data for NVDA
+[2025-05-26 09:00:07.187565] [SKIP] NVDA already queued for 130.48
+[2025-05-26 09:00:07.188041] Fetching data for QQQ
+[2025-05-26 09:00:07.992966] [SKIP] QQQ already queued for 506.28
+[2025-05-26 09:00:07.993455] Fetching data for GOOGL
+[2025-05-26 09:00:08.587561] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 09:00:08.588021] Fetching data for META
+[2025-05-26 09:00:09.183990] [SKIP] META already queued for 623.2
+[2025-05-26 09:00:09.184468] Fetching data for AMD
+[2025-05-26 09:00:09.708452] [SKIP] AMD already queued for 109.73
+[2025-05-26 09:05:04.226382] main.py started successfully.
+[2025-05-26 09:05:04.234470] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 09:05:04.234916] Signal bot started
+[2025-05-26 09:05:04.235331] Loading stock list from: data/stocks.csv
+[2025-05-26 09:05:04.236659] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 09:05:04.237098] Fetching data for SPY
+[2025-05-26 09:31:42.118881] main.py started successfully.
+[2025-05-26 09:31:42.126249] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 09:31:42.126761] Signal bot started
+[2025-05-26 09:31:42.127185] Loading stock list from: data/stocks.csv
+[2025-05-26 09:31:42.128695] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 09:31:42.129160] Fetching data for SPY
+[2025-05-26 09:31:43.411053] [SKIP] SPY already queued for 575.6
+[2025-05-26 09:31:43.411544] Fetching data for AAPL
+[2025-05-26 09:31:43.847324] [SKIP] AAPL already queued for 194.05
+[2025-05-26 09:31:43.848528] Fetching data for MSFT
+[2025-05-26 09:31:44.260597] [SKIP] MSFT already queued for 447.75
+[2025-05-26 09:31:44.261083] Fetching data for TSLA
+[2025-05-26 09:31:44.837498] [SKIP] TSLA already queued for 337.32
+[2025-05-26 09:31:44.838003] Fetching data for NVDA
+[2025-05-26 09:31:45.316325] [SKIP] NVDA already queued for 130.48
+[2025-05-26 09:31:45.316808] Fetching data for QQQ
+[2025-05-26 09:31:45.721686] [SKIP] QQQ already queued for 506.28
+[2025-05-26 09:31:45.722200] Fetching data for GOOGL
+[2025-05-26 09:31:46.162246] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 09:31:46.162736] Fetching data for META
+[2025-05-26 09:31:46.641292] [SKIP] META already queued for 623.2
+[2025-05-26 09:31:46.641748] Fetching data for AMD
+[2025-05-26 09:31:47.136048] [SKIP] AMD already queued for 109.73
+[2025-05-26 09:32:26.588261] main.py started successfully.
+[2025-05-26 09:32:26.595861] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 09:32:26.596455] Signal bot started
+[2025-05-26 09:32:26.597090] Loading stock list from: data/stocks.csv
+[2025-05-26 09:32:26.598759] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 09:32:26.599342] Fetching data for SPY
+[2025-05-26 09:32:28.625924] [SKIP] SPY already queued for 575.6
+[2025-05-26 09:32:28.626564] Fetching data for AAPL
+[2025-05-26 09:32:29.129799] [SKIP] AAPL already queued for 194.05
+[2025-05-26 09:32:29.130393] Fetching data for MSFT
+[2025-05-26 09:32:29.719362] [SKIP] MSFT already queued for 447.75
+[2025-05-26 09:32:29.720011] Fetching data for TSLA
+[2025-05-26 09:32:30.357972] [SKIP] TSLA already queued for 337.32
+[2025-05-26 09:32:30.358708] Fetching data for NVDA
+[2025-05-26 09:32:30.843092] [SKIP] NVDA already queued for 130.48
+[2025-05-26 09:32:30.843723] Fetching data for QQQ
+[2025-05-26 09:32:32.455351] [SKIP] QQQ already queued for 506.28
+[2025-05-26 09:32:32.456040] Fetching data for GOOGL
+[2025-05-26 09:32:33.171581] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 09:32:33.172226] Fetching data for META
+[2025-05-26 09:32:34.097788] [SKIP] META already queued for 623.2
+[2025-05-26 09:32:34.098781] Fetching data for AMD
+[2025-05-26 09:32:34.600318] [SKIP] AMD already queued for 109.73
