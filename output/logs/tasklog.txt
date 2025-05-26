@@ -1,0 +1,288 @@
+[2025-05-25 22:47:16.861034] [SKIP] SPY: No recent price data.
+[2025-05-25 22:47:19.766457] [WAIT] AAPL: 195.33999633789062 < 196.61
+[2025-05-25 22:47:20.119178] [WAIT] MSFT: 450.19000244140625 < 453.45
+[2025-05-25 22:47:20.453008] [WAIT] TSLA: 339.3900146484375 < 341.74
+[2025-05-25 22:47:20.729704] [WAIT] NVDA: 131.30999755859375 < 132.16
+[2025-05-25 22:47:21.026234] [WAIT] QQQ: 509.2864990234375 < 512.42
+[2025-05-25 22:47:21.404433] [WAIT] GOOGL: 168.47999572753906 < 169.4
+[2025-05-25 22:47:21.692123] [WAIT] META: 627.2000122070312 < 631.1
+[2025-05-25 22:47:22.063754] [WAIT] AMD: 110.33999633789062 < 111.0
+[2025-05-25 22:47:37.756774] [WAIT] SPY: 579.1699829101562 < 582.75
+[2025-05-25 22:47:38.079570] [WAIT] AAPL: 195.33999633789062 < 196.61
+[2025-05-25 22:47:38.479961] [WAIT] MSFT: 450.19000244140625 < 453.45
+[2025-05-25 22:47:38.787593] [WAIT] TSLA: 339.3900146484375 < 341.74
+[2025-05-25 22:47:39.121791] [WAIT] NVDA: 131.30999755859375 < 132.16
+[2025-05-25 22:47:39.488475] [WAIT] QQQ: 509.2864990234375 < 512.42
+[2025-05-25 22:47:39.875814] [WAIT] GOOGL: 168.47999572753906 < 169.4
+[2025-05-25 22:47:40.254497] [WAIT] META: 627.2000122070312 < 631.1
+[2025-05-25 22:47:40.596775] [WAIT] AMD: 110.33999633789062 < 111.0
+[2025-05-25 22:48:25.702204] main.py started successfully.
+[2025-05-25 22:48:25.710560] Args parsed: interval=5m, period=1d, force=True
+[2025-05-25 22:48:25.711202] Signal bot started
+[2025-05-25 22:48:25.711876] Loading stock list from: data/stocks.csv
+[2025-05-25 22:48:25.714566] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-25 22:48:25.715528] Fetching data for SPY
+[2025-05-25 22:48:26.980181] SPY: 78 rows retrieved
+[2025-05-25 22:48:26.997703] [SKIP] SPY already queued for 582.75
+[2025-05-25 22:48:26.998399] Fetching data for AAPL
+[2025-05-25 22:48:27.336714] AAPL: 78 rows retrieved
+[2025-05-25 22:48:27.355164] [SKIP] AAPL already queued for 196.61
+[2025-05-25 22:48:27.355795] Fetching data for MSFT
+[2025-05-25 22:48:27.633048] MSFT: 78 rows retrieved
+[2025-05-25 22:48:27.649423] [SKIP] MSFT already queued for 453.45
+[2025-05-25 22:48:27.650017] Fetching data for TSLA
+[2025-05-25 22:48:28.012249] TSLA: 78 rows retrieved
+[2025-05-25 22:48:28.029935] [SKIP] TSLA already queued for 341.74
+[2025-05-25 22:48:28.030578] Fetching data for NVDA
+[2025-05-25 22:48:28.540593] NVDA: 78 rows retrieved
+[2025-05-25 22:48:28.556981] [SKIP] NVDA already queued for 132.16
+[2025-05-25 22:48:28.557557] Fetching data for QQQ
+[2025-05-25 22:48:28.882833] QQQ: 78 rows retrieved
+[2025-05-25 22:48:28.901644] [SKIP] QQQ already queued for 512.42
+[2025-05-25 22:48:28.902274] Fetching data for GOOGL
+[2025-05-25 22:48:29.147491] GOOGL: 78 rows retrieved
+[2025-05-25 22:48:29.164778] [SKIP] GOOGL already queued for 169.4
+[2025-05-25 22:48:29.165385] Fetching data for META
+[2025-05-25 22:48:29.529408] META: 78 rows retrieved
+[2025-05-25 22:48:29.545424] [SKIP] META already queued for 631.1
+[2025-05-25 22:48:29.546021] Fetching data for AMD
+[2025-05-25 22:48:29.825818] AMD: 78 rows retrieved
+[2025-05-25 22:48:29.843523] [SKIP] AMD already queued for 111.0
+[2025-05-25 22:58:27.912691] main.py started successfully.
+[2025-05-25 22:58:27.920234] Args parsed: interval=5m, period=1d, force=True
+[2025-05-25 22:58:27.920827] Signal bot started
+[2025-05-25 22:58:27.921443] Loading stock list from: data/stocks.csv
+[2025-05-25 22:58:27.923028] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-25 22:58:27.923630] Fetching data for SPY
+[2025-05-25 22:58:28.710953] SPY: 78 rows retrieved
+[2025-05-25 22:58:28.729941] [SKIP] SPY already queued for 582.75
+[2025-05-25 22:58:28.730735] Fetching data for AAPL
+[2025-05-25 22:58:29.120777] AAPL: 78 rows retrieved
+[2025-05-25 22:58:29.137300] [SKIP] AAPL already queued for 196.61
+[2025-05-25 22:58:29.137913] Fetching data for MSFT
+[2025-05-25 22:58:29.454629] MSFT: 78 rows retrieved
+[2025-05-25 22:58:29.471442] [SKIP] MSFT already queued for 453.45
+[2025-05-25 22:58:29.472109] Fetching data for TSLA
+[2025-05-25 22:58:29.748288] TSLA: 78 rows retrieved
+[2025-05-25 22:58:29.764766] [SKIP] TSLA already queued for 341.74
+[2025-05-25 22:58:29.765363] Fetching data for NVDA
+[2025-05-25 22:58:30.127901] NVDA: 78 rows retrieved
+[2025-05-25 22:58:30.145436] [SKIP] NVDA already queued for 132.16
+[2025-05-25 22:58:30.146088] Fetching data for QQQ
+[2025-05-25 22:58:30.453886] QQQ: 78 rows retrieved
+[2025-05-25 22:58:30.470276] [SKIP] QQQ already queued for 512.42
+[2025-05-25 22:58:30.471091] Fetching data for GOOGL
+[2025-05-25 22:58:30.846914] GOOGL: 78 rows retrieved
+[2025-05-25 22:58:30.863493] [SKIP] GOOGL already queued for 169.4
+[2025-05-25 22:58:30.864141] Fetching data for META
+[2025-05-25 22:58:31.181044] META: 78 rows retrieved
+[2025-05-25 22:58:31.197324] [SKIP] META already queued for 631.1
+[2025-05-25 22:58:31.197918] Fetching data for AMD
+[2025-05-25 22:58:31.520338] AMD: 78 rows retrieved
+[2025-05-25 22:58:31.536740] [SKIP] AMD already queued for 111.0
+[2025-05-25 22:58:42.528480] [WAIT] SPY: 579.1699829101562 < 582.75
+[2025-05-25 22:58:42.900467] [WAIT] AAPL: 195.33999633789062 < 196.61
+[2025-05-25 22:58:43.248235] [WAIT] MSFT: 450.19000244140625 < 453.45
+[2025-05-25 22:58:43.617788] [WAIT] TSLA: 339.3900146484375 < 341.74
+[2025-05-25 22:58:43.917053] [WAIT] NVDA: 131.30999755859375 < 132.16
+[2025-05-25 22:58:44.312540] [WAIT] QQQ: 509.2864990234375 < 512.42
+[2025-05-25 22:58:44.625778] [WAIT] GOOGL: 168.47999572753906 < 169.4
+[2025-05-25 22:58:45.011693] [WAIT] META: 627.2000122070312 < 631.1
+[2025-05-25 22:58:45.279532] [WAIT] AMD: 110.33999633789062 < 111.0
+
+
+[2025-05-25 23:00:09.932300] main.py started successfully.
+[2025-05-25 23:00:09.938059] Args parsed: interval=5m, period=1d, force=True
+[2025-05-25 23:00:09.938644] Signal bot started
+[2025-05-25 23:00:09.939179] Loading stock list from: data/stocks.csv
+[2025-05-25 23:00:09.940948] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-25 23:00:09.941544] Fetching data for SPY
+[2025-05-25 23:00:10.909995] SPY: 78 rows retrieved
+[2025-05-25 23:00:10.929384] [PENDING] SPY queued for confirmation at 582.75
+[2025-05-25 23:00:10.930420] [ALERT ] SPY - Bearish alert sent.
+[2025-05-25 23:00:10.931243] Fetching data for AAPL
+[2025-05-25 23:00:11.234710] AAPL: 78 rows retrieved
+[2025-05-25 23:00:11.251815] [PENDING] AAPL queued for confirmation at 196.61
+[2025-05-25 23:00:11.252406] [ALERT ] AAPL - Bearish alert sent.
+[2025-05-25 23:00:11.253023] Fetching data for MSFT
+[2025-05-25 23:00:11.520346] MSFT: 78 rows retrieved
+[2025-05-25 23:00:11.537683] [PENDING] MSFT queued for confirmation at 453.45
+[2025-05-25 23:00:11.538319] [ALERT ] MSFT - Bearish alert sent.
+[2025-05-25 23:00:11.538902] Fetching data for TSLA
+[2025-05-25 23:00:11.832004] TSLA: 78 rows retrieved
+[2025-05-25 23:00:11.850631] [PENDING] TSLA queued for confirmation at 341.74
+[2025-05-25 23:00:11.851583] [ALERT ] TSLA - Bearish alert sent.
+[2025-05-25 23:00:11.852298] Fetching data for NVDA
+[2025-05-25 23:00:12.142092] NVDA: 78 rows retrieved
+[2025-05-25 23:00:12.160065] [PENDING] NVDA queued for confirmation at 132.16
+[2025-05-25 23:00:12.160677] [ALERT ] NVDA - Bearish alert sent.
+[2025-05-25 23:00:12.161280] Fetching data for QQQ
+[2025-05-25 23:00:12.494604] QQQ: 78 rows retrieved
+[2025-05-25 23:00:12.513097] [PENDING] QQQ queued for confirmation at 512.42
+[2025-05-25 23:00:12.513783] [ALERT ] QQQ - Bearish alert sent.
+[2025-05-25 23:00:12.514432] Fetching data for GOOGL
+[2025-05-25 23:00:12.839535] GOOGL: 78 rows retrieved
+[2025-05-25 23:00:12.860128] [PENDING] GOOGL queued for confirmation at 169.4
+[2025-05-25 23:00:12.860726] [ALERT ] GOOGL - Bearish alert sent.
+[2025-05-25 23:00:12.861353] Fetching data for META
+[2025-05-25 23:00:13.205081] META: 78 rows retrieved
+[2025-05-25 23:00:13.223304] [PENDING] META queued for confirmation at 631.1
+[2025-05-25 23:00:13.223946] [ALERT ] META - Bearish alert sent.
+[2025-05-25 23:00:13.224525] Fetching data for AMD
+[2025-05-25 23:00:13.539979] AMD: 78 rows retrieved
+[2025-05-25 23:00:13.557457] [PENDING] AMD queued for confirmation at 111.0
+[2025-05-25 23:00:13.558054] [ALERT ] AMD - Bearish alert sent.
+
+[2025-05-25 23:00:33.818968] [WAIT] SPY: 579.1699829101562 < 582.75
+[2025-05-25 23:00:34.174434] [WAIT] AAPL: 195.33999633789062 < 196.61
+[2025-05-25 23:00:34.520967] [WAIT] MSFT: 450.19000244140625 < 453.45
+[2025-05-25 23:00:34.953790] [WAIT] TSLA: 339.3900146484375 < 341.74
+[2025-05-25 23:00:35.228206] [WAIT] NVDA: 131.30999755859375 < 132.16
+[2025-05-25 23:00:35.620441] [WAIT] QQQ: 509.2864990234375 < 512.42
+[2025-05-25 23:00:36.017678] [WAIT] GOOGL: 168.47999572753906 < 169.4
+[2025-05-25 23:00:36.460536] [WAIT] META: 627.2000122070312 < 631.1
+[2025-05-25 23:00:36.718588] [WAIT] AMD: 110.33999633789062 < 111.0
+[2025-05-25 23:20:02.979658] main.py started successfully.
+[2025-05-25 23:20:02.987087] Args parsed: interval=5m, period=1d, force=True
+[2025-05-25 23:20:02.987666] Signal bot started
+[2025-05-25 23:20:02.988215] Loading stock list from: data/stocks.csv
+[2025-05-25 23:20:02.989743] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-25 23:20:02.990331] Fetching data for SPY
+[2025-05-25 23:20:04.381111] [PENDING] SPY queued for confirmation at 575.6
+[2025-05-25 23:20:04.381718] [ALERT ] SPY - Bearish alert sent.
+[2025-05-25 23:20:04.382329] Fetching data for AAPL
+[2025-05-25 23:20:05.118266] [PENDING] AAPL queued for confirmation at 194.05
+[2025-05-25 23:20:05.119136] [ALERT ] AAPL - Bearish alert sent.
+[2025-05-25 23:20:05.120299] Fetching data for MSFT
+[2025-05-25 23:20:05.694977] [PENDING] MSFT queued for confirmation at 447.75
+[2025-05-25 23:20:05.695596] [ALERT ] MSFT - Bearish alert sent.
+[2025-05-25 23:20:05.696265] Fetching data for TSLA
+[2025-05-25 23:20:06.344399] [PENDING] TSLA queued for confirmation at 337.32
+[2025-05-25 23:20:06.345097] [ALERT ] TSLA - Bearish alert sent.
+[2025-05-25 23:20:06.345679] Fetching data for NVDA
+[2025-05-25 23:20:07.021053] [PENDING] NVDA queued for confirmation at 130.48
+[2025-05-25 23:20:07.021903] [ALERT ] NVDA - Bearish alert sent.
+[2025-05-25 23:20:07.022602] Fetching data for QQQ
+[2025-05-25 23:20:07.579159] [PENDING] QQQ queued for confirmation at 506.28
+[2025-05-25 23:20:07.579975] [ALERT ] QQQ - Bearish alert sent.
+[2025-05-25 23:20:07.580612] Fetching data for GOOGL
+[2025-05-25 23:20:08.229127] [PENDING] GOOGL queued for confirmation at 167.39
+[2025-05-25 23:20:08.229736] [ALERT ] GOOGL - Bearish alert sent.
+[2025-05-25 23:20:08.230324] Fetching data for META
+[2025-05-25 23:20:09.049627] [PENDING] META queued for confirmation at 623.2
+[2025-05-25 23:20:09.050253] [ALERT ] META - Bearish alert sent.
+[2025-05-25 23:20:09.050863] Fetching data for AMD
+[2025-05-25 23:20:09.697120] [PENDING] AMD queued for confirmation at 109.73
+[2025-05-25 23:20:09.697873] [ALERT ] AMD - Bearish alert sent.
+
+
+[2025-05-25 23:20:52.350908] main.py started successfully.
+[2025-05-25 23:20:52.356987] Args parsed: interval=5m, period=1d, force=True
+[2025-05-25 23:20:52.357591] Signal bot started
+[2025-05-25 23:20:52.358150] Loading stock list from: data/stocks.csv
+[2025-05-25 23:20:52.359754] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-25 23:20:52.360333] Fetching data for SPY
+[2025-05-25 23:20:53.431325] [PENDING] SPY queued for confirmation at 575.6
+[2025-05-25 23:20:53.432067] [ALERT ] SPY - Bearish alert sent.
+[2025-05-25 23:20:53.432725] Fetching data for AAPL
+[2025-05-25 23:20:54.016013] [PENDING] AAPL queued for confirmation at 194.05
+[2025-05-25 23:20:54.016621] [ALERT ] AAPL - Bearish alert sent.
+[2025-05-25 23:20:54.017200] Fetching data for MSFT
+[2025-05-25 23:20:54.646260] [PENDING] MSFT queued for confirmation at 447.75
+[2025-05-25 23:20:54.646949] [ALERT ] MSFT - Bearish alert sent.
+[2025-05-25 23:20:54.647605] Fetching data for TSLA
+[2025-05-25 23:20:55.247544] [PENDING] TSLA queued for confirmation at 337.32
+[2025-05-25 23:20:55.248351] [ALERT ] TSLA - Bearish alert sent.
+[2025-05-25 23:20:55.248965] Fetching data for NVDA
+[2025-05-25 23:20:56.038265] [PENDING] NVDA queued for confirmation at 130.48
+[2025-05-25 23:20:56.038888] [ALERT ] NVDA - Bearish alert sent.
+[2025-05-25 23:20:56.039519] Fetching data for QQQ
+[2025-05-25 23:20:56.770998] [PENDING] QQQ queued for confirmation at 506.28
+[2025-05-25 23:20:56.771595] [ALERT ] QQQ - Bearish alert sent.
+[2025-05-25 23:20:56.772244] Fetching data for GOOGL
+[2025-05-25 23:20:57.627277] [PENDING] GOOGL queued for confirmation at 167.39
+[2025-05-25 23:20:57.628003] [ALERT ] GOOGL - Bearish alert sent.
+[2025-05-25 23:20:57.628659] Fetching data for META
+[2025-05-25 23:20:58.395498] [PENDING] META queued for confirmation at 623.2
+[2025-05-25 23:20:58.396335] [ALERT ] META - Bearish alert sent.
+[2025-05-25 23:20:58.397035] Fetching data for AMD
+[2025-05-25 23:20:59.034601] [PENDING] AMD queued for confirmation at 109.73
+[2025-05-25 23:20:59.035232] [ALERT ] AMD - Bearish alert sent.
+[2025-05-26 00:27:31.918844] main.py started successfully.
+[2025-05-26 00:27:31.926378] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 00:27:31.927107] Signal bot started
+[2025-05-26 00:27:31.927735] Loading stock list from: data/stocks.csv
+[2025-05-26 00:27:31.930223] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 00:27:31.930905] Fetching data for SPY
+[2025-05-26 00:27:33.223767] [SKIP] SPY already queued for 575.6
+[2025-05-26 00:27:33.224602] Fetching data for AAPL
+[2025-05-26 00:27:33.855698] [SKIP] AAPL already queued for 194.05
+[2025-05-26 00:27:33.856353] Fetching data for MSFT
+[2025-05-26 00:27:34.485897] [SKIP] MSFT already queued for 447.75
+[2025-05-26 00:27:34.486548] Fetching data for TSLA
+[2025-05-26 00:27:35.095296] [SKIP] TSLA already queued for 337.32
+[2025-05-26 00:27:35.095975] Fetching data for NVDA
+[2025-05-26 00:27:35.749512] [SKIP] NVDA already queued for 130.48
+[2025-05-26 00:27:35.751002] Fetching data for QQQ
+[2025-05-26 00:27:36.376072] [SKIP] QQQ already queued for 506.28
+[2025-05-26 00:27:36.376947] Fetching data for GOOGL
+[2025-05-26 00:27:36.940009] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 00:27:36.940827] Fetching data for META
+[2025-05-26 00:27:37.672959] [SKIP] META already queued for 623.2
+[2025-05-26 00:27:37.673579] Fetching data for AMD
+[2025-05-26 00:27:38.296192] [SKIP] AMD already queued for 109.73
+[2025-05-26 00:31:27.130135] main.py started successfully.
+[2025-05-26 00:31:27.136135] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 00:31:27.136747] Signal bot started
+[2025-05-26 00:31:27.137343] Loading stock list from: data/stocks.csv
+[2025-05-26 00:31:27.138961] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 00:31:27.139582] Fetching data for SPY
+[2025-05-26 00:31:37.919844] No data retrieved for SPY
+[2025-05-26 00:31:37.920776] Fetching data for AAPL
+[2025-05-26 00:31:41.049897] [PENDING] AAPL queued for confirmation at 194.05
+[2025-05-26 00:31:41.050504] [ALERT ] AAPL - Bearish alert sent.
+[2025-05-26 00:31:41.051110] Fetching data for MSFT
+[2025-05-26 00:31:41.628060] [PENDING] MSFT queued for confirmation at 447.75
+[2025-05-26 00:31:41.628881] [ALERT ] MSFT - Bearish alert sent.
+[2025-05-26 00:31:41.629632] Fetching data for TSLA
+[2025-05-26 00:31:42.177665] [PENDING] TSLA queued for confirmation at 337.32
+[2025-05-26 00:31:42.178325] [ALERT ] TSLA - Bearish alert sent.
+[2025-05-26 00:31:42.178932] Fetching data for NVDA
+[2025-05-26 00:31:42.802450] [PENDING] NVDA queued for confirmation at 130.48
+[2025-05-26 00:31:42.803133] [ALERT ] NVDA - Bearish alert sent.
+[2025-05-26 00:31:42.803793] Fetching data for QQQ
+[2025-05-26 00:31:43.425346] [PENDING] QQQ queued for confirmation at 506.28
+[2025-05-26 00:31:43.425961] [ALERT ] QQQ - Bearish alert sent.
+[2025-05-26 00:31:43.426538] Fetching data for GOOGL
+[2025-05-26 00:31:44.033905] [PENDING] GOOGL queued for confirmation at 167.39
+[2025-05-26 00:31:44.034612] [ALERT ] GOOGL - Bearish alert sent.
+[2025-05-26 00:31:44.035250] Fetching data for META
+[2025-05-26 00:31:44.565802] [PENDING] META queued for confirmation at 623.2
+[2025-05-26 00:31:44.566855] [ALERT ] META - Bearish alert sent.
+[2025-05-26 00:31:44.567600] Fetching data for AMD
+[2025-05-26 00:31:45.317726] [PENDING] AMD queued for confirmation at 109.73
+[2025-05-26 00:31:45.318390] [ALERT ] AMD - Bearish alert sent.
+[2025-05-26 00:32:07.279001] main.py started successfully.
+[2025-05-26 00:32:07.286367] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 00:32:07.286962] Signal bot started
+[2025-05-26 00:32:07.287532] Loading stock list from: data/stocks.csv
+[2025-05-26 00:32:07.289293] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 00:32:07.290000] Fetching data for SPY
+[2025-05-26 00:32:08.394536] [PENDING] SPY queued for confirmation at 575.6
+[2025-05-26 00:32:08.395411] [ALERT ] SPY - Bearish alert sent.
+[2025-05-26 00:32:08.396079] Fetching data for AAPL
+[2025-05-26 00:32:08.962969] [SKIP] AAPL already queued for 194.05
+[2025-05-26 00:32:08.963598] Fetching data for MSFT
+[2025-05-26 00:32:09.578238] [SKIP] MSFT already queued for 447.75
+[2025-05-26 00:32:09.578837] Fetching data for TSLA
+[2025-05-26 00:32:10.123697] [SKIP] TSLA already queued for 337.32
+[2025-05-26 00:32:10.124360] Fetching data for NVDA
+[2025-05-26 00:32:10.700809] [SKIP] NVDA already queued for 130.48
+[2025-05-26 00:32:10.701434] Fetching data for QQQ
+[2025-05-26 00:32:11.341585] [SKIP] QQQ already queued for 506.28
+[2025-05-26 00:32:11.342248] Fetching data for GOOGL
+[2025-05-26 00:32:11.948590] [SKIP] GOOGL already queued for 167.39
+[2025-05-26 00:32:11.949250] Fetching data for META
+[2025-05-26 00:32:12.646355] [SKIP] META already queued for 623.2
+[2025-05-26 00:32:12.647089] Fetching data for AMD
+[2025-05-26 00:32:13.328665] [SKIP] AMD already queued for 109.73

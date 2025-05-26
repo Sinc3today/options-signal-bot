@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "C:\Users\alexr\options_signal_bot\main.py", line 110, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\alexr\options_signal_bot\main.py", line 74, in main
+    log("main.py started successfully.")
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\alexr\options_signal_bot\main.py", line 12, in log
+    with open(LOG_PATH, "a") as f:
+         ~~~~^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'output/logs/'
+YF.download() has changed argument auto_adjust default to True
+[DISCORD ERROR] Exception for SPY: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for AAPL: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for MSFT: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for TSLA: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for NVDA: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for QQQ: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for GOOGL: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for META: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for AMD: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+YF.download() has changed argument auto_adjust default to True
+[DISCORD ERROR] Exception for SPY: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for AAPL: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for MSFT: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for TSLA: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for NVDA: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for QQQ: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for GOOGL: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for META: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>
+[DISCORD ERROR] Exception for AMD: 'charmap' codec can't encode character '\u2705' in position 9: character maps to <undefined>

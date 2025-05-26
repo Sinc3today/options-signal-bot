@@ -1,0 +1,10 @@
+Symbol,Date Logged,Signal Trend,Signal Source Time,Signal High,Signal Low,VWAP,Entry Condition,Status,Entry Time,Entry Price,Notes
+AAPL,2025-05-26T00:31:41.049585,Bearish,2025-05-26 00:31:41.049314,195.63,195.03,196.14,Break below 194.05 (0.5% buffer),entered,2025-05-26T00:32:23.625375,195.33999633789062,Auto-triggered by price breakout
+MSFT,2025-05-26T00:31:41.627676,Bearish,2025-05-26 00:31:41.627009,451.19,450.0,451.11,Break below 447.75 (0.5% buffer),waiting,,,Auto-queued by strategy engine
+TSLA,2025-05-26T00:31:42.177431,Bearish,2025-05-26 00:31:42.177154,340.04,339.02,338.32,Break below 337.32 (0.5% buffer),waiting,,,Auto-queued by strategy engine
+NVDA,2025-05-26T00:31:42.802078,Bearish,2025-05-26 00:31:42.801825,131.5,131.14,131.17,Break below 130.48 (0.5% buffer),waiting,,,Auto-queued by strategy engine
+QQQ,2025-05-26T00:31:43.425015,Bearish,2025-05-26 00:31:43.424767,509.88,508.82,509.09,Break below 506.28 (0.5% buffer),waiting,,,Auto-queued by strategy engine
+GOOGL,2025-05-26T00:31:44.033533,Bearish,2025-05-26 00:31:44.033288,168.55,168.23,169.07,Break below 167.39 (0.5% buffer),waiting,,,Auto-queued by strategy engine
+META,2025-05-26T00:31:44.565355,Bearish,2025-05-26 00:31:44.565066,627.96,626.33,628.63,Break below 623.2 (0.5% buffer),waiting,,,Auto-queued by strategy engine
+AMD,2025-05-26T00:31:45.317415,Bearish,2025-05-26 00:31:45.317139,110.44,110.29,109.6,Break below 109.73 (0.5% buffer),waiting,,,Auto-queued by strategy engine
+SPY,2025-05-26T00:32:08.394234,Bearish,2025-05-26T00:32:08.393971,579.85,578.49,578.74,Break below 575.6 (0.5% buffer),waiting,,,Auto-queued by strategy engine
