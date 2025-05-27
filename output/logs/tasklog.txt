@@ -433,3 +433,35 @@
 [2025-05-26 09:32:34.097788] [SKIP] META already queued for 623.2
 [2025-05-26 09:32:34.098781] Fetching data for AMD
 [2025-05-26 09:32:34.600318] [SKIP] AMD already queued for 109.73
+[2025-05-26 10:47:18.804301] main.py started successfully.
+[2025-05-26 10:47:18.812149] Args parsed: interval=5m, period=1d, force=True
+[2025-05-26 10:47:18.812756] Signal bot started
+[2025-05-26 10:47:18.813528] Loading stock list from: data/stocks.csv
+[2025-05-26 10:47:18.815670] Stock list loaded: ['SPY', 'AAPL', 'MSFT', 'TSLA', 'NVDA', 'QQQ', 'GOOGL', 'META', 'AMD']
+[2025-05-26 10:47:18.816356] Fetching data for SPY
+[2025-05-26 10:47:19.757931] [PENDING] SPY queued for confirmation at 575.6
+[2025-05-26 10:47:19.758563] [ALERT ] SPY - Bearish alert sent.
+[2025-05-26 10:47:19.759229] Fetching data for AAPL
+[2025-05-26 10:47:20.238541] [PENDING] AAPL queued for confirmation at 194.05
+[2025-05-26 10:47:20.239302] [ALERT ] AAPL - Bearish alert sent.
+[2025-05-26 10:47:20.240044] Fetching data for MSFT
+[2025-05-26 10:47:20.663359] [PENDING] MSFT queued for confirmation at 447.75
+[2025-05-26 10:47:20.664008] [ALERT ] MSFT - Bearish alert sent.
+[2025-05-26 10:47:20.664748] Fetching data for TSLA
+[2025-05-26 10:47:21.159671] [PENDING] TSLA queued for confirmation at 337.32
+[2025-05-26 10:47:21.160360] [ALERT ] TSLA - Bearish alert sent.
+[2025-05-26 10:47:21.161018] Fetching data for NVDA
+[2025-05-26 10:47:21.545336] [PENDING] NVDA queued for confirmation at 130.48
+[2025-05-26 10:47:21.546075] [ALERT ] NVDA - Bearish alert sent.
+[2025-05-26 10:47:21.546706] Fetching data for QQQ
+[2025-05-26 10:47:21.982873] [PENDING] QQQ queued for confirmation at 506.28
+[2025-05-26 10:47:21.983544] [ALERT ] QQQ - Bearish alert sent.
+[2025-05-26 10:47:21.984092] Fetching data for GOOGL
+[2025-05-26 10:47:22.540996] [PENDING] GOOGL queued for confirmation at 167.39
+[2025-05-26 10:47:22.541681] [ALERT ] GOOGL - Bearish alert sent.
+[2025-05-26 10:47:22.542362] Fetching data for META
+[2025-05-26 10:47:23.074789] [PENDING] META queued for confirmation at 623.2
+[2025-05-26 10:47:23.075807] [ALERT ] META - Bearish alert sent.
+[2025-05-26 10:47:23.077034] Fetching data for AMD
+[2025-05-26 10:47:23.634582] [PENDING] AMD queued for confirmation at 109.73
+[2025-05-26 10:47:23.635290] [ALERT ] AMD - Bearish alert sent.

@@ -1,0 +1,13 @@
+# Python cache and logs
+__pycache__/
+*.pyc
+*.log
+
+# Secrets and config
+.env
+config/
+secrets/
+
+# Data outputs
+*.csv
+*.xlsx
