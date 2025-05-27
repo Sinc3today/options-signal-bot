@@ -9,6 +9,8 @@ INTERVAL_MINUTES = 5
 # Paths
 STOCK_LIST_PATH = "data/stocks.csv"
 LOG_PATH = "output/logs/"
+PENDING_ENTRIES_PATH = "output/logs/pending_entries.csv"
+ENTRY_LOG_PATH = "output/logs/entry_log.csv"
 
 # Data Fetching Settings
 DEFAULT_INTERVAL = "5m"         # or "1h", "15m", etc.

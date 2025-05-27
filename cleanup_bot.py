@@ -5,7 +5,6 @@ from discord.ext import commands
 import pandas as pd
 from dotenv import load_dotenv
 import os
-from entry_exit_tracker import log_entry
 
 load_dotenv()
 TOKEN = os.getenv("Discord_Cleanup_Bot_Token")
@@ -140,16 +139,6 @@ async def mark_entry(ctx, symbol: str):
     df.loc[df_symbol.index[-1], "Entry Time"] = now.isoformat()
     df.to_csv(path, index=False)
 
-    # Log to trades.csv
-    log_entry(
-        symbol=symbol,
-        entry_price=entry_price,
-        buffer="manual",
-        rationale="Manually confirmed from Discord",
-        expectation=f"{row['Trend']} setup from {row['Signal Source Time']}",
-        signal_time=row["Signal Source Time"],
-        trend=row["Trend"]
-    )
 
     await ctx.send(f"✅ `{symbol}` marked as entered and logged to trades.")
 

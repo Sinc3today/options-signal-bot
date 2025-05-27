@@ -1,7 +1,7 @@
 import os
-from datetime import datetime
 import re
 
+from datetime import datetime
 from config import LOG_PATH
 
 def strip_emoji(text):
@@ -16,13 +16,17 @@ def strip_emoji(text):
         "\U0001FA00-\U0001FA6F"
         "\U0001FA70-\U0001FAFF"
         "\u2600-\u26FF"
-        "\u2700-\u27BF" "]+", flags=re.UNICODE)
+        "\u2700-\u27BF"
+        "]+", flags=re.UNICODE)
     return emoji_pattern.sub(r'', text)
 
 def log(message):
     timestamped = f"[{datetime.now()}] {message}"
     print(timestamped)
-    safe_message = strip_emoji(timestamped)
-    os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
-    with open(LOG_PATH, "a", encoding="utf-8") as f:
-        f.write(safe_message + "\n")
+    try:
+        safe_message = strip_emoji(timestamped)
+        os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
+        with open(LOG_PATH, "a", encoding="utf-8") as f:
+            f.write(safe_message + "\n")
+    except Exception as e:
+        print(f"[Log Error] Could not write log entry: {e}")

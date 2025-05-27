@@ -1,105 +1,39 @@
-import csv
 import os
-from datetime import datetime
+import csv
+from config import PENDING_ENTRIES_PATH, ENTRY_LOG_PATH
 
-TRADES_PATH = "output/logs/trades.csv"
+class TradeTracker:
 
-# Field headers used consistently
-HEADERS = [
-    "Symbol", "Entry Time", "Entry Price",
-    "Buffer", "Rationale", "Expectation",
-    "Signal Source Time", "Trend at Entry",
-    "Exit Time", "Exit Price", "Change %", "Outcome", "Notes"
-]
+    @staticmethod
+    def queue_pending_entry(symbol, trend, signal_time, signal_high, signal_low, vwap, entry_condition, notes=""):
+        os.makedirs(os.path.dirname(PENDING_ENTRIES_PATH), exist_ok=True)
+        headers = ["Symbol", "Trend", "Signal Source Time", "High", "Low", "VWAP", "Entry Condition", "Notes", "Status", "Trigger Price", "Direction"]
+        row = {
+            "Symbol": symbol,
+            "Trend": trend,
+            "Signal Source Time": signal_time,
+            "High": signal_high,
+            "Low": signal_low,
+            "VWAP": vwap,
+            "Entry Condition": entry_condition,
+            "Notes": notes,
+            "Status": "waiting",
+            "Trigger Price": 0.0,
+            "Direction": trend.lower()
+        }
+        file_exists = os.path.exists(PENDING_ENTRIES_PATH)
+        with open(PENDING_ENTRIES_PATH, "a", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=headers)
+            if not file_exists:
+                writer.writeheader()
+            writer.writerow(row)
 
-def ensure_headers():
-    """Ensure the trades file exists with proper headers."""
-    os.makedirs(os.path.dirname(TRADES_PATH), exist_ok=True)
-    if not os.path.exists(TRADES_PATH):
-        with open(TRADES_PATH, "w", newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(HEADERS)
-
-def log_entry(
-    symbol,
-    entry_price,
-    buffer="0%",
-    rationale="",
-    expectation="",
-    signal_time=None,
-    trend=""
-):
-    """Log a new trade entry row."""
-    ensure_headers()
-
-    with open(TRADES_PATH, "a", newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow([
-            symbol,
-            datetime.now().isoformat(),  # Entry Time
-            entry_price,
-            buffer,
-            rationale,
-            expectation,
-            signal_time or "",
-            trend,
-            "", "", "", "", ""  # Leave exit-related fields blank
-        ])
-
-    print(f"[ENTRY ✅] {symbol} @ {entry_price}")
-
-def log_exit(symbol, exit_price, notes="", outcome=None):
-    """Mark the most recent open trade for this symbol as exited."""
-    rows = []
-    updated = False
-    exit_time = datetime.now().isoformat()
-
-    try:
-        with open(TRADES_PATH, "r", newline='') as f:
-            reader = csv.DictReader(f)
-            rows = list(reader)
-
-        for row in reversed(rows):  # Start from most recent
-            if row["Symbol"] == symbol and row["Exit Time"] == "":
-                try:
-                    entry_price = float(row["Entry Price"])
-                    change_pct = round(((exit_price - entry_price) / entry_price) * 100, 2)
-                except Exception as e:
-                    print(f"[EXIT ERROR] Failed to calculate change: {e}")
-                    change_pct = ""
-                    outcome = "Error"
-
-                row["Exit Time"] = exit_time
-                row["Exit Price"] = exit_price
-                row["Change %"] = change_pct
-                row["Outcome"] = outcome or _default_outcome(change_pct)
-                row["Notes"] = notes
-                updated = True
-                break  # Only update the most recent match
-
-        if not updated:
-            print(f"[EXIT ❌] No open trade found for {symbol}")
-            return
-
-        with open(TRADES_PATH, "w", newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=HEADERS)
-            writer.writeheader()
-            writer.writerows(rows)
-
-        print(f"[EXIT ✅] {symbol} @ {exit_price} | Δ {change_pct}% | Outcome: {row['Outcome']}")
-
-    except Exception as e:
-        print(f"[EXIT ❌] Error updating exit for {symbol}: {e}")
-
-def _default_outcome(change_pct):
-    """Basic outcome categorization for logging."""
-    try:
-        change_pct = float(change_pct)
-        if change_pct > 0.5:
-            return "Win"
-        elif change_pct < -0.5:
-            return "Loss"
-        else:
-            return "Neutral"
-    except:
-        return "Unknown"
+    @staticmethod
+    def mark_trade_entry(entry_data):
+        os.makedirs(os.path.dirname(ENTRY_LOG_PATH), exist_ok=True)
+        file_exists = os.path.exists(ENTRY_LOG_PATH)
+        with open(ENTRY_LOG_PATH, "a", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=entry_data.keys())
+            if not file_exists:
+                writer.writeheader()
+            writer.writerow(entry_data)
