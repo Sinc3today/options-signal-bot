@@ -4,6 +4,7 @@ import argparse
 import pandas as pd
 import re
 
+# Import config constants
 from config import DEFAULT_INTERVAL, DEFAULT_PERIOD, STOCK_LIST_PATH
 from price_data import get_recent_price_data
 from signals import analyze_signals
@@ -11,8 +12,10 @@ from predictor import score_signals
 from prediction_logger import log_prediction
 from discord_alert import send_discord_alert, run_discord_bot
 from strategy_engine import evaluate_entry_conditions
-from pending_entry_queue import queue_pending_entry
+from logger import log
+from entry_exit_tracker import TradeTracker
 
+# Clean out stale or expired pending entries
 def clean_old_pending_entries(days_old=2):
     path = "output/logs/pending_entries.csv"
     if not os.path.exists(path):
@@ -32,13 +35,15 @@ def clean_old_pending_entries(days_old=2):
     except Exception as e:
         log(f"[ERROR] Failed to clean old pending entries: {e}")
 
-# Clean malformed entries
+# Clean up any malformed entries in the pending queue
 if os.path.exists("output/logs/pending_entries.csv"):
     df = pd.read_csv("output/logs/pending_entries.csv")
     cleaned = df[~df["Entry Condition"].str.contains("Ticker", na=False)]
     cleaned.to_csv("output/logs/pending_entries.csv", index=False)
     print("Cleaned malformed entries from pending_entries.csv.")
 
+# Deprecated — now handled by logger.py
+# Kept in case you want to re-integrate emoji stripping elsewhere
 LOG_PATH = "output/logs/tasklog.txt"
 
 def strip_emoji(text):
@@ -55,31 +60,26 @@ def strip_emoji(text):
         "\u2700-\u27BF" "]+", flags=re.UNICODE)
     return emoji_pattern.sub(r'', text)
 
-def log(message):
-    timestamped = f"[{datetime.datetime.now()}] {message}"
-    print(timestamped)
-    safe_message = strip_emoji(timestamped)
-    os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
-    with open(LOG_PATH, "a", encoding="utf-8") as f:
-        f.write(safe_message + "\n")
-
+# Parse CLI args or fallback to defaults
 def parse_args():
     try:
         parser = argparse.ArgumentParser()
         parser.add_argument('--interval', type=str, default=DEFAULT_INTERVAL)
         parser.add_argument('--period', type=str, default=DEFAULT_PERIOD)
-        parser.add_argument('--force', action='store_true')
+        parser.add_argument('--force', action='store_true')  # Forces run even outside market hours
         args = parser.parse_args()
         log(f"Args parsed: interval={args.interval}, period={args.period}, force={args.force}")
         return args
     except Exception as e:
         log(f"[ERROR] parse_args() failed: {e}")
+        # Fallback defaults
         class Args:
             interval = DEFAULT_INTERVAL
             period = DEFAULT_PERIOD
             force = True
         return Args()
 
+# Load symbols from CSV
 def load_stock_list():
     try:
         log(f"Loading stock list from: {STOCK_LIST_PATH}")
@@ -91,6 +91,7 @@ def load_stock_list():
         log(f"[ERROR] Failed to load stock list: {e}")
         return []
 
+# Prevent duplicate entries for the same trigger price
 def is_already_queued(symbol, trigger_price):
     path = "output/logs/pending_entries.csv"
     if not os.path.exists(path):
@@ -98,6 +99,7 @@ def is_already_queued(symbol, trigger_price):
     df = pd.read_csv(path)
     return any((df["Symbol"] == symbol) & (df["Status"] == "waiting") & (df["Entry Condition"].str.contains(f"{trigger_price}")))
 
+# MAIN LOGIC
 def main():
     log("main.py started successfully.")
     clean_old_pending_entries(days_old=2)
@@ -122,11 +124,14 @@ def main():
                 log(f"No data retrieved for {symbol}")
                 continue
 
+            # Save fetched data for review/debug
             df.to_csv(f"data/history/{symbol}_latest.csv")
 
+            # Generate signals and trend score
             signals = analyze_signals(df)
             trend = score_signals(signals)
 
+            # Long-term trend filter (optional)
             from config import (
                 ENABLE_LONG_TERM_TREND_CONFIRMATION,
                 LONG_TERM_INTERVAL,
@@ -146,11 +151,15 @@ def main():
                     log(f"[FILTER ❌] {symbol}: {trend} trend rejected by long-term {long_trend}")
                     continue
 
+            # Log trend and indicators to prediction file
             log_prediction(symbol, signals, trend, df)
+
+            # Decide if entry condition is valid
             entry_decision = evaluate_entry_conditions(symbol, df, signals, trend)
             if not entry_decision:
                 continue
 
+            # Calculate entry signal values
             signal_high = float(df["High"].iloc[-1].item())
             signal_low = float(df["Low"].iloc[-1].item())
             vwap = round((df["Close"] * df["Volume"]).cumsum() / df["Volume"].cumsum(), 2).iloc[-1].item()
@@ -164,11 +173,13 @@ def main():
             else:
                 continue
 
+            # Prevent duplicate queues
             if is_already_queued(symbol, trigger_price):
                 log(f"[SKIP] {symbol} already queued for {trigger_price}")
                 continue
 
-            queue_pending_entry(
+            # Save pending entry for later evaluation
+            TradeTracker.queue_pending_entry(
                 symbol=symbol,
                 trend=trend,
                 signal_time=datetime.datetime.now().isoformat(),
@@ -180,12 +191,14 @@ def main():
             )
             log(f"[PENDING] {symbol} queued for confirmation at {trigger_price}")
 
+            # Send alert to Discord
             send_discord_alert(symbol, trend, signals)
             log(f"[ALERT ✅] {symbol} - {trend} alert sent.")
 
         except Exception as e:
             log(f"[ERROR] Failed to process {symbol}: {e}")
 
+    # Launch Discord bot responder (emoji handler, etc.)
     try:
         run_discord_bot()
     except Exception as e:

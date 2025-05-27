@@ -1,42 +1,29 @@
 import os
 import csv
-from datetime import datetime
-from price_data import get_recent_price_data
+from price_data import get_recent_price_data  # Fetches latest 1-minute OHLC data
+from logger import log  # Centralized logging
 
-# File paths (match project layout)
+# File paths (used for tracking pending and confirmed entries)
 PENDING_FILE = "output/logs/pending_entries.csv"
 LOG_FILE = "output/logs/entry_log.txt"
 
-def log(message):
-    """
-    Logs a message to output/logs/entry_log.txt with UTF-8 encoding.
-    Automatically creates the output/logs directory if it doesn't exist.
-    """
-    os.makedirs(os.path.dirname(LOG_FILE), exist_ok=True)
-    try:
-        with open(LOG_FILE, "a", encoding="utf-8") as f:
-            f.write(f"[{datetime.now()}] {message}\n")
-    except Exception as e:
-        print(f"[Log Error] Could not write log entry: {e}")
-
-
 def get_current_price(symbol):
     """
-    Uses get_recent_price_data() from price_data module to return the latest price for a symbol.
-    Assumes result has a 'Close' column.
+    Gets the most recent price from yfinance using get_recent_price_data().
+    Returns float or None if unavailable.
     """
     try:
         df = get_recent_price_data(symbol)
         if df is not None and not df.empty:
-            return df["Close"].iloc[-1].item()  # Future-proof pandas float
+            return df["Close"].iloc[-1].item()
     except Exception as e:
         log(f"[ERROR] Failed to fetch price for {symbol}: {e}")
     return None
 
-
 def load_pending_entries():
     """
-    Loads pending entries from CSV. Each row is a dict.
+    Loads entries from the pending_entries.csv file.
+    Each row is returned as a dict.
     """
     entries = []
     if os.path.exists(PENDING_FILE):
@@ -48,10 +35,9 @@ def load_pending_entries():
         log(f"[WARNING] No pending entries file found: {PENDING_FILE}")
     return entries
 
-
 def save_pending_entries(entries):
     """
-    Overwrites the pending entries file with the updated list.
+    Saves the updated list of pending entries back to CSV.
     """
     if not entries:
         return
@@ -61,11 +47,12 @@ def save_pending_entries(entries):
         writer.writeheader()
         writer.writerows(entries)
 
-
 def check_pending_entries():
     """
-    Evaluates each pending entry. Updates 'Status' field to prevent duplicates.
-    If conditions are met, marks as 'entered'. If not, leaves as 'waiting'.
+    Core logic that reviews all pending trades:
+    - Loads entries from CSV
+    - Checks if current price meets the trigger condition
+    - If so, marks as 'entered' and logs it
     """
     all_entries = load_pending_entries()
     updated_entries = []
@@ -76,7 +63,7 @@ def check_pending_entries():
         direction = entry.get("Direction", "bullish").lower()
 
         if status == "entered":
-            updated_entries.append(entry)  # already processed
+            updated_entries.append(entry)  # Already handled
             continue
 
         try:
@@ -88,14 +75,13 @@ def check_pending_entries():
             continue
 
         current_price = get_current_price(symbol)
-
         if current_price is None:
             log(f"[SKIP] {symbol} — could not fetch current price")
             entry["Status"] = "waiting"
             updated_entries.append(entry)
             continue
 
-        # Evaluate trigger condition
+        # Trigger logic based on direction
         triggered = (
             direction == "bullish" and current_price >= trigger_price or
             direction == "bearish" and current_price <= trigger_price
@@ -104,14 +90,13 @@ def check_pending_entries():
         if triggered:
             log(f"[ENTRY ✅] {symbol} triggered @ {current_price} (Target: {trigger_price})")
             entry["Status"] = "entered"
-            # Optional: mark_trade_entry(...)
+            # TODO: TradeTracker.mark_trade_entry(entry)  # Optional integration
         else:
             entry["Status"] = "waiting"
 
-        updated_entries.append(entry)  # Always add entry back with updated status
+        updated_entries.append(entry)
 
     save_pending_entries(updated_entries)
-
 
 if __name__ == "__main__":
     check_pending_entries()
